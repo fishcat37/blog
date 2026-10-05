@@ -1,0 +1,14 @@
+/public/
+/resources/
+/.hugo_build.lock
+/.tools/
+/.wrangler/
+/.cloudflare/
+/.cache/
+/node_modules/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.log
+.DS_Store

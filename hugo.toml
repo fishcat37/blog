@@ -1,0 +1,21 @@
+baseURL = 'https://fishcat37-blog.pages.dev/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = 'fishcat 的博客'
+theme = 'ananke'
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[params]
+  author = 'fishcat'
+  description = '记录学习、技术与日常思考。'
+  mainSections = ['posts']
+  recent_posts_number = 5
+  show_reading_time = true
+  date_format = '2006年1月2日'
+  background_color_class = 'bg-dark-blue'
+
+[[menus.main]]
+  name = '文章'
+  pageRef = '/posts'
+  weight = 10

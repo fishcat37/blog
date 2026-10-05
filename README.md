@@ -1,6 +1,6 @@
 # fishcat 的博客
 
-使用 Hugo 和 Ananke 主题的中文静态博客，通过 Cloudflare Pages 免费托管。
+使用 Hugo 和 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题的中文静态博客，通过 Cloudflare Pages 免费托管。首页采用简介与文章列表布局，支持浅色与深色切换。
 
 ## 本地开发
 

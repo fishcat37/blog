@@ -16,8 +16,3 @@ enableRobotsTXT = true
 [params.homeInfoParams]
   Title = 'fishcat 的博客'
   Content = '记录学习、技术与日常思考。'
-
-[[menus.main]]
-  name = '文章'
-  pageRef = '/posts'
-  weight = 10

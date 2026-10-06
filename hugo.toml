@@ -12,7 +12,14 @@ enableRobotsTXT = true
   mainSections = ['posts']
   ShowReadingTime = true
   DateFormat = '2006年1月2日'
+  comments = true
 
 [params.homeInfoParams]
   Title = 'fishcat 的博客'
   Content = '记录学习、技术与日常思考。'
+
+[params.giscus]
+  repo = 'fishcat37/blog'
+  repoId = 'R_kgDOU875IA'
+  category = 'Announcements'
+  categoryId = 'DIC_kwDOU875IM4DHJDy'

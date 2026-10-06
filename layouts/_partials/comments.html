@@ -1,0 +1,49 @@
+{{- if in site.Params.mainSections .Type }}
+{{- with site.Params.giscus }}
+<div class="giscus"></div>
+<script>
+    (() => {
+        const getTheme = () => document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.crossOrigin = "anonymous";
+        Object.assign(script.dataset, {
+            repo: {{ .repo }},
+            repoId: {{ .repoId }},
+            category: {{ .category }},
+            categoryId: {{ .categoryId }},
+            mapping: "pathname",
+            strict: "1",
+            reactionsEnabled: "1",
+            emitMetadata: "0",
+            inputPosition: "top",
+            theme: getTheme(),
+            lang: "zh-CN",
+            loading: "lazy"
+        });
+
+        const syncTheme = () => {
+            const theme = getTheme();
+            script.dataset.theme = theme;
+            const iframe = document.querySelector("iframe.giscus-frame");
+            if (iframe) {
+                iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, "https://giscus.app");
+            }
+        };
+
+        script.addEventListener("load", () => {
+            const iframe = document.querySelector("iframe.giscus-frame");
+            if (iframe) {
+                iframe.addEventListener("load", syncTheme);
+            }
+        });
+        new MutationObserver(syncTheme).observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-theme"]
+        });
+        document.querySelector(".giscus").appendChild(script);
+    })();
+</script>
+{{- end }}
+{{- end }}

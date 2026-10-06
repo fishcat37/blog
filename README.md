@@ -9,6 +9,7 @@
 - [Hugo](https://gohugo.io/)：静态网站生成器
 - [PaperMod](https://github.com/adityatelange/hugo-PaperMod)：博客主题
 - [Cloudflare Pages](https://pages.cloudflare.com/)：网站托管与自动部署
+- [giscus](https://giscus.app/zh-CN)：基于 GitHub Discussions 的文章评论
 
 ## 仓库结构
 

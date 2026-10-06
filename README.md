@@ -1,55 +1,20 @@
 # fishcat 的博客
 
-使用 Hugo 和 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题的中文静态博客，通过 Cloudflare Pages 免费托管。首页采用简介与文章列表布局，支持浅色与深色切换。
+记录学习、技术实践与日常思考的个人博客。
 
-## 本地开发
+**在线阅读：[fishcat37-blog.pages.dev](https://fishcat37-blog.pages.dev/)**
 
-使用 Hugo Extended **0.167.0**。初始化时已将该版本安装到当前目录的 `.tools/hugo`，并验证官方发布文件的 SHA-256。该二进制不提交到 Git。
+## 技术栈
 
-```sh
-# 初始化已克隆仓库的主题
-git submodule update --init --recursive
+- [Hugo](https://gohugo.io/)：静态网站生成器
+- [PaperMod](https://github.com/adityatelange/hugo-PaperMod)：博客主题
+- [Cloudflare Pages](https://pages.cloudflare.com/)：网站托管与自动部署
 
-# 当前电脑预览，包含草稿
-.tools/hugo server -D
+## 仓库结构
 
-# 生成正式站点，输出到 public/
-.tools/hugo --minify
+- `content/posts/`：文章内容
+- `archetypes/`：新文章模板
+- `hugo.toml`：网站配置
+- `themes/PaperMod/`：主题，以 Git 子模块管理
 
-# 新建文章，默认是草稿
-.tools/hugo new content posts/my-first-post.md
-```
-
-编辑文章后，将 front matter 中的 `draft` 改为 `false` 再发布。标题、简介与网站地址在 `hugo.toml` 中修改。
-
-在其他电脑安装同版本 Hugo 后，可以将上述命令的 `.tools/hugo` 换成 `hugo`。
-
-## GitHub
-
-源代码仓库默认设为私有，SSH remote 为 `git@github.com:fishcat37/blog.git`。
-
-```sh
-git clone --recurse-submodules git@github.com:fishcat37/blog.git
-```
-
-当前电脑的系统 SSH 配置有权限错误，因此本仓库单独设置了 `core.sshCommand = ssh -F /dev/null`，使用已有 SSH 密钥连接 GitHub。
-
-## Cloudflare Pages
-
-项目名称为 `fishcat37-blog`，免费地址为 [fishcat37-blog.pages.dev](https://fishcat37-blog.pages.dev/)，与 `hugo.toml` 的 `baseURL` 一致。
-
-已使用 GitHub 集成连接 `fishcat37/blog`，推送到 `main` 后会自动部署，不需要在 GitHub 保存 Cloudflare API Token。
-
-| 设置 | 值 |
-| --- | --- |
-| 项目类型 | Pages，GitHub 集成 |
-| 生产分支 | `main` |
-| 框架预设 | Hugo |
-| 根目录 | 仓库根目录 |
-| 构建命令 | `hugo --minify` |
-| 构建输出目录 | `public` |
-| 环境变量 | `HUGO_VERSION=0.167.0`（生产与预览环境） |
-
-Cloudflare 项目中已为生产与预览环境设置以上 Hugo 版本。部署状态和构建日志可在 Cloudflare 的 Workers & Pages → `fishcat37-blog` 中查看。
-
-参考：[Cloudflare Hugo 部署指南](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/)、[Hugo 入门指南](https://gohugo.io/getting-started/quick-start/)。
+文章以 Markdown 编写。网站由 Cloudflare Pages 构建，推送到 `main` 后自动更新。

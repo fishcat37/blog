@@ -12,3 +12,4 @@
 .dev.vars.*
 *.log
 .DS_Store
+/LOCAL_GUIDE.md

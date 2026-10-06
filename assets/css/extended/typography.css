@@ -1,0 +1,31 @@
+:root {
+    --blog-sans-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --blog-reading-font: "LXGW WenKai Screen", var(--blog-sans-font);
+    --blog-code-font: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+body {
+    font-family: var(--blog-sans-font);
+}
+
+.post-content,
+.entry-content {
+    font-family: var(--blog-reading-font);
+    line-height: 1.8;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-family: var(--blog-sans-font);
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: var(--blog-code-font);
+}

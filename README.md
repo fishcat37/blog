@@ -2,6 +2,8 @@
 
 使用 Hugo 和 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题的中文静态博客，通过 Cloudflare Pages 免费托管。首页采用简介与文章列表布局，支持浅色与深色切换。
 
+正文与文章摘要使用霞鹜文楷屏幕阅读版，标题使用黑体，代码使用等宽字体。字体随网站托管并按需加载，排版配置位于 `assets/css/extended/typography.css`，来源与许可见 `static/fonts/lxgw-wenkai-screen/README.md`。
+
 ## 本地开发
 
 使用 Hugo Extended **0.167.0**。初始化时已将该版本安装到当前目录的 `.tools/hugo`，并验证官方发布文件的 SHA-256。该二进制不提交到 Git。

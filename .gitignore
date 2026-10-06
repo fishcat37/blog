@@ -12,4 +12,5 @@
 .dev.vars.*
 *.log
 .DS_Store
+.serena
 /LOCAL_GUIDE.md

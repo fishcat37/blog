@@ -17,5 +17,3 @@
 - `archetypes/`：新文章模板
 - `hugo.toml`：网站配置
 - `themes/PaperMod/`：主题，以 Git 子模块管理
-
-文章以 Markdown 编写。网站由 Cloudflare Pages 构建，推送到 `main` 后自动更新。

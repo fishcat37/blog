@@ -1,6 +1,6 @@
 +++  
 date = '2026-10-06T18:20:26+08:00'  
-draft = true  
+draft = false
 title = '语义分割的模型和方案'  
 +++
 

@@ -23,3 +23,10 @@ enableRobotsTXT = true
   repoId = 'R_kgDOU875IA'
   category = 'Announcements'
   categoryId = 'DIC_kwDOU875IM4DHJDy'
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [['\[', '\]'], ['$$', '$$']]
+  inline = [['\(', '\)'], ['$', '$']]

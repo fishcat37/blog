@@ -11,6 +11,8 @@
 - [Cloudflare Pages](https://pages.cloudflare.com/)：网站托管与自动部署
 - [giscus](https://giscus.app/zh-CN)：基于 GitHub Discussions 的文章评论
 
+文章支持 Mermaid 图表和 LaTeX 数学公式。数学公式由 Hugo 内置 KaTeX 在构建时渲染，图表使用 Mermaid。
+
 ## 仓库结构
 
 - `content/posts/`：文章内容

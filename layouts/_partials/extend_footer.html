@@ -1,5 +1,0 @@
-{{- if .Store.Get "hasMermaid" }}
-  {{- $script := resources.Get "js/mermaid.js" | minify | fingerprint }}
-<script type="module" src="{{ $script.RelPermalink }}"
-        integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- end }}

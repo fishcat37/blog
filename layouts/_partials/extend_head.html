@@ -5,3 +5,10 @@
       integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ"
       crossorigin="anonymous">
 {{- end }}
+
+{{- /* PaperMod 会缓存页脚，按页面加载的脚本放在这里。模块脚本会在文档解析完成后执行。 */}}
+{{- if .Store.Get "hasMermaid" }}
+  {{- $script := resources.Get "js/mermaid.js" | minify | fingerprint }}
+<script type="module" src="{{ $script.RelPermalink }}"
+        integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
